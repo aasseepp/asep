@@ -16,4 +16,7 @@ public class Pesan {
         String pesan="Selamat datang";
         System.out.println(pesan);
     }
+    private void delete(){
+        
+    }
 }
