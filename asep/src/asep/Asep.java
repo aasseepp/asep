@@ -15,6 +15,6 @@ public class Asep {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.print("selamat datang ");
+        Pesan.tampilPesan();
     }
 }
