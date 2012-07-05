@@ -4,6 +4,7 @@
  */
 package com.asep.siac.view;
 
+import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
@@ -45,6 +46,11 @@ public class MainMenu extends javax.swing.JFrame {
         mAkademik.setText("Akademik");
 
         mnuMahasiswa.setText("Mahasiswa");
+        mnuMahasiswa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuMahasiswaActionPerformed(evt);
+            }
+        });
         mAkademik.add(mnuMahasiswa);
 
         jMenuBar1.add(mAkademik);
@@ -56,6 +62,17 @@ public class MainMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuMahasiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuMahasiswaActionPerformed
+        // TODO add your handling code here:
+        MahasiswaForm Form=new MahasiswaForm();
+        jDesktopPane1.add(Form);
+        Dimension scren=this.getSize();
+        Dimension frame=Form.getSize();
+        Form.setLocation((scren.width-frame.width)/2,(scren.height-frame.height)/2);
+        Form.reload();
+        Form.setVisible(true);
+    }//GEN-LAST:event_mnuMahasiswaActionPerformed
 
     /**
      * @param args the command line arguments
